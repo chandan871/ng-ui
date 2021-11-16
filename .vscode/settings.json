@@ -1,0 +1,7 @@
+[{
+    "editor.formatOnSave": true
+  },
+  {
+    "sonarlint.ls.javaHome": "C:\\Program Files\\Java\\jre1.8.0_131"
+  }
+]

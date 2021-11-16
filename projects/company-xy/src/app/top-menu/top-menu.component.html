@@ -1,0 +1,22 @@
+<div>
+  <mat-toolbar color="primary" class="toolbar-setting w3-container">
+    <mat-toolbar-row>
+      <button mat-icon-button fxShow="true" fxHide.gt-sm>
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span [routerLink] = "['home']" mat-button>Company XYZ</span>
+      <span class="menu-spacer"></span>
+      <div fxFlex="60" class="sec2">
+      <div fxShow="true" fxHide.lt-md class="nav-menu">
+        <a [routerLink] = "['login']" mat-button>HOME</a>
+        <a routerLink = "registration" mat-button>Services</a>
+        <a href="#" mat-button>Marketing</a>
+        <a href="#" mat-button>About Us</a>
+      </div>
+    </div>
+      <div fxFlex="22" class="sec2">
+    </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</div>
+<router-outlet></router-outlet>

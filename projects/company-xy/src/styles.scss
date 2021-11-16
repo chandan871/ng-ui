@@ -1,0 +1,35 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+ //.carousel-list {
+
+.carousel-slide {
+  margin-right: 4rem;
+  padding-right: 0px !important;
+  max-width: 300px !important;
+  max-height: 350px !important;
+  box-shadow: 5px 15px 30px rgba(0,0,0,0.3) !important;
+  border-radius: 10px !important;
+  overflow: hidden !important;
+
+}
+
+.carousel-slide img {
+  width: 100% !important;
+height:100% !important;
+object-fit: cover !important;
+object-position:top !important;
+
+}
+// .carousel{
+//   border-radius: 5% !important;
+// }
+
+.card-movies {
+    margin-right: 2rem;
+    padding-right: 0px !important;
+    max-width: 180px !important;
+    max-height: 250px !important;
+    box-shadow: 5px 15px 30px rgba(0,0,0,0.3) !important;
+    border-radius: 10px !important;
+    overflow: hidden !important;
+}

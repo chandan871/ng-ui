@@ -1,0 +1,11 @@
+.action {
+    display: table-cell;
+}
+.table-header{
+    position: relative; 
+    left: 150px;
+}
+.last-header{
+    position: relative;
+    left: 270px;
+}

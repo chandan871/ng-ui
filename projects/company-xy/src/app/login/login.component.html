@@ -1,0 +1,40 @@
+
+<div fxLayout="row" fxLayout.xs="column" fxFlexFill class="component-color">
+  <div fxFlex="5" class="sec1" class="side-space">
+  </div>
+  <div fxFlex="80" class="sec3" >
+<div class="login-container">
+  <div class="login-content">
+  <mat-error *ngIf="loginError">
+      {{content.INVALID_USER_CREDENTIAL}}
+    </mat-error>
+    <mat-toolbar class="login-toolbar" color="primary">{{content.LOGIN}}</mat-toolbar>
+    <mat-card>
+      <form [formGroup]="loginForm" novalidate (ngSubmit)="onSubmit()"> 
+        <mat-form-field>
+          <mat-icon matPrefix>person_outline</mat-icon>
+          <input autofocus type="email" matInput placeholder="Email" formControlName="email">
+          <mat-error *ngIf="!loginForm.controls['email'].valid">
+            {{content.USER_NAME_REQUIRED}}
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-icon matPrefix>lock_outline</mat-icon>
+          <input type="password" autocomplete="false" matInput placeholder="Password" formControlName="password">
+          <mat-error *ngIf="loginForm.controls['password'].value!='' && loginForm.controls['password'].hasError('pattern') ">
+            {{content.INVALID_PASSWORD}}
+          </mat-error>
+          <mat-error *ngIf="loginForm.controls['password'].value==''">
+            {{content.PASSWORD_REQUIRED}}
+          </mat-error>
+        </mat-form-field>
+
+        <button type="submit" mat-raised-button color="primary">Login</button>
+      </form>
+    </mat-card>
+  </div>
+</div>
+</div>
+</div>
+

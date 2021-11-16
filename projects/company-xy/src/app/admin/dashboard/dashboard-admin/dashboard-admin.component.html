@@ -1,0 +1,16 @@
+<section>
+<div fxLayout.xs="column" fxLayout="row wrap" fxLayoutGap="10px" ngClass.gt-xs="ml-10">
+  <ng-container *ngFor="let company of companyList; let i = index;">
+    <mat-card fxFlex.sm="0 1 calc(50%-10px)" fxFlex.md="0 1 calc(33%-10px)" fxFlex.gt-md="0 1 calc(25%-10px)">
+      <mat-card-title>{{company.name}}</mat-card-title>
+      <img mat-card-image [src]="company.logo" class="image" alt = "{{company.name}}">
+      <mat-card-content>{{company.description}}</mat-card-content>
+      <ng-container>
+        <ng-container *ngIf="contactList">
+          <lib-core-contact-details [contactList]="contactList" [comanyId]="company.id"></lib-core-contact-details>
+          </ng-container>
+      </ng-container>
+    </mat-card>
+  </ng-container>
+</div>
+</section>
